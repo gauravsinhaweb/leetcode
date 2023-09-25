@@ -18,10 +18,8 @@ var romanToInt = function(s) {
     const nextVal = romanNumerals[arr[index + 1]];
 
     if (nextVal && currentVal < nextVal) {
-      // If the current value is less than the next value, subtract the current value from the total
       return total - currentVal;
     } else {
-      // Otherwise, add the current value to the total
       return total + currentVal;
     }
   }, 0);
