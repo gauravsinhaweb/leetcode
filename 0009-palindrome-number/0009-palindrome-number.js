@@ -3,12 +3,15 @@
  * @return {boolean}
  */
 var isPalindrome = function(x) {
-  let _num =[]
-  let  num = x.toString().split('')
-for (let n in num){
- let _n =  num[num.length-n-1]
-_num.push(_n)
+let num = x;
+let rev = 0;
+while(x>0){
+   let temp = x%10;
+   rev=(rev*10)+temp;
+    x = Math.floor(x/10)
 }
-
-return x === + _num.join('')
+  if(x <  Math.pow(-2, 31) || x > Math.pow(2,31)){
+    return 0
+  }
+return rev === num
 };
